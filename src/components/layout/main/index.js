@@ -58,6 +58,7 @@ class Main extends React.Component {
             <MenuItem><Link to="/component/button">Button</Link></MenuItem>
             <MenuItem><Link to="/component/font_icon">FontIcon</Link></MenuItem>
             <MenuItem><Link to="/component/date_select">DateSelect</Link></MenuItem>
+            <MenuItem><Link to="/component/alert">Alert</Link></MenuItem>
           </Menu>
         </Sider>
         <Content className={theme.document}>

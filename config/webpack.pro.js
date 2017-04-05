@@ -61,7 +61,7 @@ const plugins = [
 
     happyPackPlugin({
         name: 'happypack-component-css',
-        loaders: ['style', 'css?modules&localIdentName=[name]__[local]', 'postcss']
+        loaders: ['style', 'css?modules&localIdentName=[hash:base64:5]', 'postcss']
     }),
 
     happyPackPlugin({
@@ -106,7 +106,7 @@ module.exports = {
         path: ROOT_PATH + '/docs',
         filename: '[name].[chunkhash].js',
         chunkFilename: '[name].[chunkhash].min.js',
-        publicPath: '/'
+        publicPath: './'
     },
 
     resolve: {

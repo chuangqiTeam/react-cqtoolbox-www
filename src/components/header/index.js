@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import {Header} from 'react-cqtoolbox/lib/layout';
 import {Menu, MenuItem} from 'react-cqtoolbox/lib/menu';
 
@@ -8,12 +9,14 @@ class CustomHeader extends Component {
     return (
       <Header>
         <div className="logo">
-          <img height="100%" src={require('../../image/logo.png')} alt=""/>
+          <a href="http://www.cqaso.com">
+            <img height="100%" src={require('../../image/logo.png')} alt=""/>
+          </a>
         </div>
         <Menu mode="horizontal">
           <MenuItem>安装</MenuItem>
-          <MenuItem>组件</MenuItem>
-          <MenuItem>Github</MenuItem>
+          <MenuItem><Link to="/component/button">组件</Link></MenuItem>
+          <MenuItem><a href="https://github.com/chuangqiTeam/react-cqtoolbox">Github</a></MenuItem>
         </Menu>
       </Header>
     );
