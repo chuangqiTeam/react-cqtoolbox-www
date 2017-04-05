@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Main from './components/layout/main';
 import {Layout} from 'react-cqtoolbox/lib/layout';
 import Header from './components/header';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {HashRouter as Router, Route} from 'react-router-dom';
 
 ReactDOM.render((
   <Router>
