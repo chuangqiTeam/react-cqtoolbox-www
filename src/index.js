@@ -1,7 +1,16 @@
-import 'core-js/fn/object/assign';
+import './style/style.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/Main';
+import Main from './components/layout/main';
+import {Layout} from 'react-cqtoolbox/lib/layout';
+import Header from './components/header';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
-// Render the main component into the dom
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render((
+  <Router>
+    <Layout>
+      <Header/>
+      <Route path="/component/:component" component={Main} />
+    </Layout>
+  </Router>
+), document.getElementById('root'));
