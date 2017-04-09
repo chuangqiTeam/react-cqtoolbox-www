@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import { transform } from 'babel-standalone';
 import * as ReactToolbox from 'react-cqtoolbox';
 import moment from 'moment';
+import classnames from 'classnames';
 import style from './theme.css';
 
 const ERROR_TIMEOUT = 500;
@@ -82,11 +83,16 @@ const Preview = React.createClass({
   },
 
   render () {
-    let className = style.preview;
-    if (this.props.className) className += ` ${this.props.className}`;
+    const {
+      className,
+      code, // eslint-disable-line
+      ...other,
+    } = this.props;
+
+    const classes = classnames(style.preview, className);
 
     return (
-      <div className={className}>
+      <div className={classes} {...other}>
         {this.state.error !== null ? <span className={style.error}>{this.state.error}</span> : null}
         <div ref="mount" className={style.content} />
       </div>

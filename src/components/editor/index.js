@@ -1,5 +1,6 @@
 import React from 'react';
 import CodeMirror from 'codemirror';
+import classnames from 'classnames';
 import style from './theme.css';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/mode/javascript/javascript.js';
@@ -56,11 +57,21 @@ class Editor extends React.Component {
   }
 
   render () {
-    let className = style.editor;
-    if (this.props.className) className += ` ${this.props.className}`;
+    const {
+      className,
+      onChange,// eslint-disable-line
+      codeText,
+      lineNumbers,// eslint-disable-line
+      tabSize,// eslint-disable-line
+      theme,// eslint-disable-line
+      ...other,
+    } = this.props;
+
+    const classes = classnames(style.editor, className);
+
     return (
-      <div className={className}>
-        <textarea ref="editor" defaultValue={this.props.codeText} />
+      <div className={classes} {...other}>
+        <textarea ref="editor" defaultValue={codeText} />
       </div>
     );
   }
