@@ -12,7 +12,6 @@ ReactDOM.render((
     <Layout>
       <Header/>
       <Route path="/" component={Install} />
-      <Route path="/install" component={Install} />
       <Route path="/component/:component" component={Main} />
     </Layout>
   </Router>

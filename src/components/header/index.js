@@ -15,7 +15,7 @@ class CustomHeader extends Component {
           </a>
         </div>
         <Menu mode="horizontal">
-          <MenuItem><Link to="/install">安装</Link></MenuItem>
+          <MenuItem><Link to="/">安装</Link></MenuItem>
           <MenuItem><Link to="/component/button">组件</Link></MenuItem>
           <MenuItem><a href="https://github.com/chuangqiTeam/react-cqtoolbox">Github</a></MenuItem>
         </Menu>
