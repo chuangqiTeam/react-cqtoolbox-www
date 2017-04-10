@@ -1,0 +1,23 @@
+class SwitchTest extends React.Component {
+  state = {
+    value: true,
+  };
+
+  handleChange = (value) => {
+    this.setState({ value: value });
+  };
+
+  render() {
+    return (
+      <Section title="转换开关">
+        <Switch
+          checked={this.state.value}
+          label="微信提醒"
+          onChange={this.handleChange}
+        />
+      </Section>
+    );
+  }
+}
+
+return <SwitchTest />;

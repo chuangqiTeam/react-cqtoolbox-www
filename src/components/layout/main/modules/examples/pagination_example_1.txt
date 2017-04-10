@@ -1,0 +1,23 @@
+class PaginationTest extends React.Component {
+  state = {
+    page: 1,
+    total: 10,
+  }
+
+  handlePageClick = (page) => {
+    this.setState({ page });
+  }
+
+  render() {
+    return (
+      <Section title="分页">
+        <Pagination
+            currentPage={this.state.page}
+            totalPages={this.state.total}
+            onChange={this.handlePageClick}/>
+      </Section>
+    );
+  }
+}
+
+return <PaginationTest />;

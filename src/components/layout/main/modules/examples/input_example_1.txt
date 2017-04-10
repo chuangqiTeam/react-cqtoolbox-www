@@ -1,0 +1,24 @@
+const InputTest = () => (
+  <Section title="输入框">
+    <div style={{width: 300 }}>
+      <Input placeholder="请输入内容..."/>
+      <br/>
+      <Input prefix="search" />
+      <br/>
+      <Input prefix="search" suffix="close-circle" />
+      <br/>
+      <Input size="small" />
+      <br/>
+      <Input size="large" />
+      <br/>
+      <Input size="small" prefix="search" suffix="close-circle" />
+      <br/>
+      <Input size="large" prefix="search" suffix="close-circle" />
+      <br/>
+      <Input type="textarea" prefix="search" suffix="close-circle" />
+    </div>
+
+  </Section>
+);
+
+return <InputTest />;

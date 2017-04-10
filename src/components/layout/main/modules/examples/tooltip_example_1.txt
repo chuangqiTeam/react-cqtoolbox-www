@@ -1,0 +1,19 @@
+const TooltipButton = Tooltip(Button);
+
+class TooltipTest extends React.Component {
+
+  render() {
+
+    return (
+      <Section title="提示框">
+        <TooltipButton placement="left" label='提示' tooltip='我是提示框' />
+        <TooltipButton label='提示' tooltip='我是提示框' />
+        <TooltipButton placement="bottom" label='提示' tooltip='我是提示框' />
+        <TooltipButton placement="topLeft" label='提示' tooltip='我是提示框' />
+        <TooltipButton placement="right" label='提示' tooltip='我是提示框' />
+      </Section>
+    )
+  }
+}
+
+return <TooltipTest />;

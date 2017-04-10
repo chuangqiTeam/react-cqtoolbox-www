@@ -1,5 +1,16 @@
 @import './reset.css';
 
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, .05);
+  border-radius: 5px;
+}
+
 body {
     font-size: 14px;
 }

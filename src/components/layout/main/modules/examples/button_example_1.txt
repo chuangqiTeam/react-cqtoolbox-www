@@ -1,4 +1,4 @@
-const GithubIcon = (<Button icon="github" label="Github" href="http://github.com/lanjingling0510"/>);
+const GithubIcon = (<Button icon="github" label="Github" href="https://github.com/chuangqiTeam/react-cqtoolbox"/>);
 
 const ButtonTest = () => (
   <Section title="按钮" rightTitle={GithubIcon}>

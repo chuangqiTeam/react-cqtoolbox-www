@@ -1,0 +1,37 @@
+class AutoCompleteTest extends React.Component {
+  state = {
+    dataSource: [],
+    value: '',
+  }
+
+  onChange = (value) => {
+    this.setState({
+      value: value,
+      dataSource: !value ? [] : [
+        value,
+        value + value,
+        value + value + value,
+      ],
+    });
+  }
+
+  render() {
+    const { dataSource, value } = this.state;
+
+    return (
+      <Section title="自动补全">
+          <Autocomplete
+            value={value}
+            dataSource={dataSource}
+            onChange={this.onChange}>
+            <Input
+              prefix="search"
+              suffix="close-circle"
+              onSuffixClick={this.onChange.bind(this, '')} />
+          </Autocomplete>
+      </Section>
+    )
+  }
+}
+
+return <AutoCompleteTest />;

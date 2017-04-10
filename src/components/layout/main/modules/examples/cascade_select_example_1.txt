@@ -1,0 +1,43 @@
+const genres = [
+  {
+    "value": 36,
+    "label": "总榜"
+  },
+  {
+    "value": 6000,
+    "label": "商务"
+  },
+  {
+    "value": 6014,
+    "label": "游戏",
+    "children": [
+      {
+        "value": 7001,
+        "label": "动作游戏"
+      },
+      {
+        "value": 7002,
+        "parentvalue": 6014,
+        "nameEnglish": "Adventure",
+        "label": "探险游戏"
+      }
+     ]
+  }
+];
+
+class CascadeSelectTest extends React.Component {
+  render() {
+    const selectData = {
+      data: genres,
+      onChange: console.log.bind(console),
+    };
+
+    return (
+      <Section title="级联下拉框">
+        <CascadeSelect {...selectData} />
+      </Section>
+    )
+  }
+}
+
+return <CascadeSelectTest />;

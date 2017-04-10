@@ -1,0 +1,26 @@
+
+const countrys = [
+    {value: 'CN', label: '中国'},
+    {value: 'US', label: '美国'},
+    {value: 'HK', label: '中国香港'},
+    {value: 'TW', label: '中国台湾'},
+];
+
+class SelectTest extends React.Component {
+
+  render() {
+    const selectData = {
+      data: countrys,
+      maxRowNum: 8,
+      onChange: console.log.bind(console),
+    };
+
+    return (
+      <Section title="下拉框">
+        <Select {...selectData} />
+      </Section>
+    )
+  }
+}
+
+return <SelectTest />;

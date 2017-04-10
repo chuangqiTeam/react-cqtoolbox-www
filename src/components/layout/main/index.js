@@ -1,14 +1,13 @@
 import React from 'react';
 import {Layout, Content, Sider} from 'react-cqtoolbox/lib/layout';
-import {Menu, MenuItem} from 'react-cqtoolbox/lib/menu';
 import Button from 'react-cqtoolbox/lib/button';
 import components from './modules/components';
+import Menu from './components/menu';
 import Markdown from '../../markdown';
 import Playground from './components/playground';
 import Boundary from './components/boundary';
 import theme from './theme.css';
 import classnames from 'classnames';
-import {Link} from 'react-router-dom';
 import {viewportW} from '../../../utils/dom';
 
 
@@ -60,19 +59,15 @@ class Main extends React.Component {
 
     return (
       <Layout hasSider theme={theme} className={classes}>
+
         <Sider
+          width={220}
           collapsible={false}
           defaultCollapsed={false}
           theme={theme}>
-          <Menu>
-            <MenuItem><Link to="/component/button">Button</Link></MenuItem>
-            <MenuItem><Link to="/component/font_icon">FontIcon</Link></MenuItem>
-            <MenuItem><Link to="/component/date_select">DateSelect</Link></MenuItem>
-            <MenuItem><Link to="/component/alert">Alert</Link></MenuItem>
-            <MenuItem><Link to="/component/table">Table</Link></MenuItem>
-            {/* <MenuItem><Link to="/component/dialog">Dialog</Link></MenuItem> */}
-          </Menu>
+          <Menu />
         </Sider>
+
         <Content
           style={{width: this.setMarkdownWidth()}}
           className={theme.document}>
@@ -94,6 +89,7 @@ class Main extends React.Component {
           className={theme.playground}>
           <Playground ref="playground"/>
         </Content>
+
       </Layout>
     );
   }

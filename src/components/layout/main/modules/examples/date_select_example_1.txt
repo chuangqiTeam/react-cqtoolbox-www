@@ -12,7 +12,6 @@ class DatepickerTest extends React.Component {
     return (
       <Section title="时间选择器">
         <DateSelect date={this.state.value} onChange={this.handleSelect} />
-        <DateRangeSelect />
       </Section>
     );
   }

@@ -1,0 +1,24 @@
+
+class DatepickerTest extends React.Component {
+  state = {
+    startDate: moment().add(-30, 'days'),
+    endDate: moment(),
+  }
+
+  handleSelect = (startDate, endDate) => {
+    this.setState({ startDate, endDate });
+  }
+
+  render () {
+    return (
+      <Section title="时间范围选择器">
+        <DateRangeSelect
+        startDate={this.state.startDate}
+        endDate={this.state.endDate}
+        onChange={this.handleSelect} />
+      </Section>
+    );
+  }
+}
+
+return <DatepickerTest />;
