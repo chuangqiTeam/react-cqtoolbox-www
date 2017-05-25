@@ -10,6 +10,11 @@
     top: 0;
     left: 0;
     margin-top: -4px;
+    border-bottom: 1px solid rgb(204, 204, 204);
+    &:hover {
+        border-bottom-color: #39f;
+        border-bottom-style: dashed;
+    }
 }
 
 .vertical {
@@ -19,4 +24,9 @@
     top: 0;
     left: 530px;
     margin-left: -4px;
+    border-left: 1px solid rgb(204, 204, 204);
+    &:hover {
+        border-left-color: #39f;
+        border-left-style: dashed;
+    }
 }
